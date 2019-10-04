@@ -37,7 +37,7 @@ void mon_shell()
     }
 }
 
-int main(int argc,char *argv[])
+int main(int argc)
 {
     mon_shell();
 }
