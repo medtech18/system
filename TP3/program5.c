@@ -114,6 +114,32 @@ int execligne(char* cmd,int f0[2],_Bool nextpipe){
     {
       perror("trop d'argument pour cd\n");
     } 
+  }else if(strcmp(com[0], "getenv")==0){
+    if (com[1]!=(char *)0 && com[2]==(char *)0 )
+    {
+      char* var=getenv(com[1]);
+      if(var!=NULL){
+        printf("%s\n",var);
+      }else{
+        printf("la variable d'environnement '%s' n'est pas définie!",com[1]);
+      }
+    }else
+    {
+      printf("erreur d'argument pour la fonction getenv!");
+    }
+  }else if(strcmp(com[0], "setenv")==0)
+  {
+    if (com[1]==(char *)0)
+    {
+      com[0]="env";
+      execcmd(com,f0,nextpipe);
+    }else if(com[3]==(char *)0 && com[2]!=(char *)0)
+    {
+      setenv(com[1],com[2],1);
+    } else{
+      printf("erreur de parametre %s",com[0]);
+    }
+    
   }
   else
   {
