@@ -41,7 +41,6 @@ char * split_string( char *s, const char *delimiter )//fonction recuperer du sit
         *p = '\0';
         p += n;
     }
-
     return t;
 }
 
