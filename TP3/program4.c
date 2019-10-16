@@ -80,8 +80,6 @@ int execcmdnextpipe(char* com[10],int f0[2]){//cette fonction execute la command
         perror("fork"); 
         exit(-1);
     case 0 :
-    
-  printf("%d\n\n\n\n",f0[0]);
       if(f0[0]!=0)
         {
           close(0);
