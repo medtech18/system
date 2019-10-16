@@ -215,7 +215,7 @@ int execcmdlastpipe(char* com[10],int f0[2]){
 
 int execlignepipe(char* cmd,int f0[2],_Bool nextpipe){
  
-  char* com[10];-
+  char* com[10];
 
   Lire_commande(cmd,com," ");
   if (strcmp(com[0], "cd")==0){
